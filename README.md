@@ -1,5 +1,5 @@
 # Encryption
-This is ransomeware.
+This is ransomware.
 
 Do not use it for bad stuff.
 
